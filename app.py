@@ -12,7 +12,7 @@ from components.manual_input_section import manual_input
 from components.results_display import display_results
 
 
-st.set_page_config(page_title="WEBMIS Malaria Forecasting System", layout="wide")
+st.set_page_config(page_title="WEBMIS Malaria Forecasting System v1.0", layout="wide")
 st.title("WEBMIS Malaria Surveillance Forecasting System")
 
 
