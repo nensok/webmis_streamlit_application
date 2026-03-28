@@ -10,7 +10,8 @@ def prophet_forecast(daily, daily_model, weekly_model, pos_model, days):
 
     weekly = daily.set_index("Date_of_diagnosis").resample("W").sum().reset_index()
 
-    future_week = weekly_model.make_future_dataframe(periods=12,freq="W")
+    forecast_weeks = max(1, round(days / 7))
+    future_week = weekly_model.make_future_dataframe(periods=forecast_weeks, freq="W")
     forecast_week = weekly_model.predict(future_week)
 
 

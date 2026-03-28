@@ -47,7 +47,7 @@ def recursive_forecast(df, model, target, horizon):
         data = create_rolling_features(data,target)
 
         # Fill missing lag/rolling values instead of dropping rows
-        data = data.fillna(method="ffill")
+        data = data.ffill()
 
         # ensure dataset still has rows
         if data.empty:
@@ -101,7 +101,7 @@ def xgb_forecast(daily_data, forecast_days):
    df = create_lag_features(df,"positivity_rate")
    df = create_rolling_features(df,"positivity_rate")
 
-   df = df.fillna(method="ffill")
+   df = df.ffill()
    df = df.fillna(0)
 
 

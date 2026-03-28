@@ -5,3 +5,5 @@ prophet
 matplotlib
 scikit-learn
 openpyxl
+joblib
+plotly
